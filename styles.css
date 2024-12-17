@@ -1,0 +1,112 @@
+/* Basic styling for the body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Card styling */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    animation: float 6s ease-in-out infinite;
+    z-index: 1;
+}
+
+/* Header styling */
+.header h1 {
+    font-size: 2.5rem;
+    color: #ff6347;
+}
+
+/* Content section */
+.content p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+#Greeting {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: green;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff4500;
+}
+
+/* Hidden greeting */
+.hidden {
+    display: none;
+}
+
+/* Animation for floating card */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Snowflake styling */
+.snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: #fff;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    animation: fall 10s linear infinite, drift 10s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -10px;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes drift {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 30vw;
+    }
+    100% {
+        left: 0;
+    }
+}
